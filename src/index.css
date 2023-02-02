@@ -13,5 +13,18 @@
   .sideBar .active::before {
     @apply relative text-white text-[0.5rem] content-["0"] w-[4px] h-[40px] bg-white ml-0 border-white rounded-lg
   }
+  
+  .App {
+  @apply flex
+  }
+
+  .side{
+    @apply w-[45%]
+  }
+
+  .content {
+    @apply w-[55%] p-[20px]
+  }
+
 
 }
