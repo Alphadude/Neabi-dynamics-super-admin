@@ -21,7 +21,7 @@ const Companies = () => {
    },
    {
      field: "category",
-     headerName: "Category",
+     headerName: "Time Onboarding",
      type: "number",
      flex: 1,
      headerAlign: "left",
@@ -44,7 +44,7 @@ const Companies = () => {
 
   return (
     <Box m="20px">
-      <h1 className="font-bold"> Companies</h1>
+      <h1 className="font-bold"> AIRLINES</h1>
       <Box m="40px 0 0 0" height="80vh">
          <DataGrid
           rows={companiesData}

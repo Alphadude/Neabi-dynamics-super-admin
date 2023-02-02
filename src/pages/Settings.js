@@ -18,7 +18,7 @@ const handlePrevStep = () => {
 };
 
 return (
-  <section className="mt-8 p-8 bg-white text-black shadow-lg h-[665px] top-6">
+  <section className="mx-8 mt-8 p-8 bg-white text-black shadow-lg h-[665px] top-6">
 
     {step === 1 && (
         <div>

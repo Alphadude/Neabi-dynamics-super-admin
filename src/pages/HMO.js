@@ -44,7 +44,7 @@ const Companies = () => {
 
   return (
     <Box m="20px">
-      <h1> Companies</h1>
+      <h1 className="font-bold"> Companies</h1>
       <Box m="40px 0 0 0" height="80vh">
          <DataGrid
           rows={managementData}
