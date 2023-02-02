@@ -8,10 +8,16 @@ import {
 
 import Auth from './pages/Sign-in'
 import Dashboard from './pages/Dashboard'
+
+import Nav from './components/SideBar'
+import Stat from './components/Stat'
+
 const App = () => {
   return (
     <div className="App">
       <Router>
+        <Nav />
+        <Stat/>
         <Routes>
           <Route path="/"
             exact element={<Auth />} />

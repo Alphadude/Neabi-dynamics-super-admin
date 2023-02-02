@@ -3,7 +3,6 @@ import Car from '../images/sideBar/Car.svg'
 import Bell from '../images/sideBar/Bell.svg'
 import Wallet from '../images/sideBar/Wallet.svg'
 import Settings from '../images/sideBar/Settings.svg'
-import Rect from '../images/sideBar/rect.svg'
 import Airline from '../images/sideBar/Airline.svg'
 
 
