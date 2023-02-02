@@ -5,11 +5,11 @@ import SideBar from '../components/SideBar'
 import Stat from '../components/Stat'
 const Dashboard = () =>{
   return(
-    <section className="grid grid-cols-3 gap-[1px]">
+    <section className="flex gap-60">
       <div>
       <SideBar />
       </div>
-      <div>
+      <div className="right-64">
       <Stat />
       </div>
       <div>

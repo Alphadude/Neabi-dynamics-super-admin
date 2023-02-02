@@ -8,6 +8,7 @@ import Logout from '../images/sideBar/Logout.svg'
 
 const SideBar = () =>{
   const [selected, setSelected] = useState(0);
+  const [report, setReport] = useState(-1);
 
   return(
     <section className="sideBar">
@@ -20,13 +21,17 @@ const SideBar = () =>{
 
         {/*Navigation*/}
         <div className="flex flex-col">
-          {Nav.map (({id, src, name, link}) =>(
-            <div key={id}>
-            <Link to={link}>
-              <div className="menu-item ">
-                <div className="flex m-2 md:pl-2  md:py-2">
-                  <img src={src} alt="" className="" />
-                  <p className="hidden md:flex text-white text-center justify-center ml-2 text-[16px] leading-5 font-[500]">{name}</p>
+          {Nav.map ((item, index) =>(
+            <div
+              className={selected === index ? "menu-item active" : "menuItem"}
+              key={index}
+              onClick={() => setSelected(index)}
+              >
+            <Link to={item.link}>
+              <div className="flex menu-item gap-2">
+                <div className="flex m-2  md:pl-2  md:py-2">
+                  <img src={item.src} alt="" className="" />
+                  <p className="hidden md:flex text-white text-center justify-center ml-2 text-[16px] leading-5 font-[500]">{item.name}</p>
                 </div>
               </div>
             </Link>
@@ -38,13 +43,17 @@ const SideBar = () =>{
 
       <div className="flex flex-col">
         <h2 className="hidden md:flex pl-6 py-3 mx-5 text-[16px] text-white opacity-50 leading-6 font-[400]">Report</h2>
-        {Extra.map (({id, src, name, link}) =>(
-          <div key={id}>
-          <Link to={link}>
+        {Extra.map ((item, index) =>(
+          <div
+            className={report === index ? "menuitem active" : "menuItem"}
+            key={index}
+            onClick={() => setReport(index)}
+            >
+          <Link to={item.link}>
             <div className="md:pl-6 md:py-3 md:mx-5 text-center cursor-pointer mb-3 flex items-center hover:border-2 hover:border-[#006AFF] hover:rounded-lg hover:bg-[#006AFF]">
               <div className="flex m-2">
-                <img src={src} alt="" className="" />
-                <p className="hidden md:flex text-white text-center justify-center ml-2 text-[16px] leading-5 font-[500]">{name}</p>
+                <img src={item.src} alt="" className="" />
+                <p className="hidden md:flex text-white text-center justify-center ml-2 text-[16px] leading-5 font-[500]">{item.name}</p>
               </div>
             </div>
           </Link>

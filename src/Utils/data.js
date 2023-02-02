@@ -9,37 +9,31 @@ import Airline from '../images/sideBar/Airline.svg'
 
   const Nav = [
     {
-      id: 1,
       src: Dash,
       name: 'Dashboard',
       link: '/dashboard'
     },
     {
-      id: 2,
       src: Airline,
       name: 'Airlines',
       link: '/airlines'
     },
     {
-      id: 3,
       src: Car,
       name: 'Companies',
       link: '/companies'
     },
     {
-      id: 4,
       src: Bell,
       name: 'HMO',
       link: '/HMO'
     },
     {
-      id: 5,
       src: Wallet,
       name: 'Payment Details',
       link: '/payment-details'
     },
     {
-      id: 6,
       src: Settings,
       name: 'Settings',
       link: '/settings'
@@ -47,13 +41,11 @@ import Airline from '../images/sideBar/Airline.svg'
   ]
   const Extra = [
     {
-      id: 1,
       src: Bell,
       name: 'Notification',
       link: '/notification'
     },
     {
-      id: 2,
       src: Settings,
       name: 'Settings',
       link: '/settings'

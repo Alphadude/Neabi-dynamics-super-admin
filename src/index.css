@@ -4,7 +4,7 @@
 
 @layer components {
   .menu-item{
-    @apply md:mx-5 text-center cursor-pointer mb-3 flex items-center transform transition duration-100 hover:border-2 hover:border-[#006AFF] hover:rounded-lg hover:bg-[#006AFF]
+    @apply md:mx-5 text-center cursor-pointer flex items-center transform transition duration-100 hover:border-2 hover:border-[#006AFF] hover:rounded-lg hover:bg-[#006AFF]
   }
   .sideBar .active {
     @apply border-2 border-[#006AFF] rounded-lg bg-[#006AFF]
