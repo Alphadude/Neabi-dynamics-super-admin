@@ -45,6 +45,7 @@ const Companies = () => {
 
   return (
     <Layout showStat={true} >
+    
       <div className="m-6 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[87%]">
         <Box m="16px">
           <h1 className="font-bold"> AIRLINES</h1>
