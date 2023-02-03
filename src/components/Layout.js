@@ -12,7 +12,7 @@ function Layout({ children, showStat }) {
       {/* <TopBar /> */}
     </div>
       <main className="flex">
-      {showStat == true ? <Stat /> : ``}
+      {showStat === true ? <Stat /> : ``}
         {children}
         </main>
     </>

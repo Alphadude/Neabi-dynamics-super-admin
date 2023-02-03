@@ -84,7 +84,7 @@ const Auth = () =>{
 
       </div>
       <p className="text-center mt-2">New here? <a href="/sign-out" className="hover:border-b-2 hover:border-[#0B1C2E]">Sign up</a></p>
-
+      </div>
     </section>
   )
 }
