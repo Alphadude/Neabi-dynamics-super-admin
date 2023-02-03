@@ -18,9 +18,8 @@ const Companies = () => {
     {
      field: "name",
      headerName: "Name",
-     flex: 1,
-     cellClassName: "name-column--cell",
      flex: 1.16,
+     cellClassName: "name-column--cell",
    },
    {
      field: "category",
@@ -36,7 +35,16 @@ const Companies = () => {
      flex: 0.5,
      renderCell: ({ row: { details } }) => {
           return (
-            <Button variant="contained" href="#contained-buttons">
+            <Button
+              variant="contained"
+              href="#contained-buttons"
+              style={{
+                  borderRadius: "4px",
+                  backgroundColor: "#006AFF",
+                  padding: "12px 25px",
+                  fontSize: "12px"
+              }}
+              >
               Details
             </Button>
           );

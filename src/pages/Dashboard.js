@@ -38,7 +38,16 @@ const Dashboard = () =>{
      flex: 0.5,
      renderCell: ({ row: { details } }) => {
           return (
-            <Button variant="contained" href="#contained-buttons">
+            <Button
+              variant="contained"
+              href="#contained-buttons"
+              style={{
+                  borderRadius: "4px",
+                  backgroundColor: "#006AFF",
+                  padding: "12px 25px",
+                  fontSize: "12px"
+              }}
+              >
               Details
             </Button>
           );
@@ -67,7 +76,7 @@ const Dashboard = () =>{
                 </select>
               </div>
               <div className="border-2 rounded-lg">
-                <button className="bg-blue-500 text-white px-6 py-2 hover:bg-blue-700">
+                <button className="bg-[#006AFF] text-white px-6 py-2 hover:bg-blue-700">
                   Check
                 </button>
               </div>

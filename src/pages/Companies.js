@@ -35,7 +35,16 @@ const Companies = () => {
      flex: 0.5,
      renderCell: ({ row: { details } }) => {
           return (
-            <Button variant="contained" href="#contained-buttons">
+            <Button
+              variant="contained"
+              href="#contained-buttons"
+              style={{
+                  borderRadius: "4px",
+                  backgroundColor: "#006AFF",
+                  padding: "12px 25px",
+                  fontSize: "12px"
+              }}
+              >
               Details
             </Button>
           );
