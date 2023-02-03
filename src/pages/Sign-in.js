@@ -24,7 +24,8 @@ const Auth = () =>{
       </Link>
 
       {/*Sign-in form*/}
-      <div className="mx-auto items-center justify-center border-2 rounded-[20px] shadow-xl h-1/2 w-[80vw] md:h-[492px] md:w-[492px]">
+      <div class="md:ml-96 md:pl-24">
+      <div className="content-center flex flex-col mx-auto items-center  border-2 rounded-[20px] shadow-xl h-1/2 w-[80vw] md:h-[492px] md:w-[492px]">
         <h1 className="text-[#0B1C2E] text-[20px] md:text-[32px] text-center leading-8 pt-8">Sign in</h1>
         <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center ">
           <div className="flex flex-col pt-4 md:pt-8">
@@ -52,7 +53,7 @@ const Auth = () =>{
 
       </div>
       <p className="text-center mt-2">New here? <a href="/sign-out" className="hover:border-b-2 hover:border-[#0B1C2E]">Sign up</a></p>
-
+      </div>
     </section>
   )
 }
