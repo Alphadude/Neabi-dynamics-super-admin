@@ -3,7 +3,8 @@ import { DataGrid } from "@mui/x-data-grid";
 import { airlineData } from "../Utils/formData.js";
 
 import Layout from "../components/Layout.js";
-
+import Filter from "../images/dash/Filter.svg";
+ 
 const Companies = () => {
   const columns = [
     {field: "number", headerName: "No", flex: 0.2, },
@@ -31,7 +32,7 @@ const Companies = () => {
    },
    {
      field: "details",
-     headerName: " ",
+     headerName: <img src={Filter} alt="" />,
      flex: 0.5,
      renderCell: ({ row: { details } }) => {
           return (

@@ -3,6 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { companiesData } from "../Utils/formData.js";
 
 import Layout from "../components/Layout.js";
+import Filter from "../images/dash/Filter.svg";
 
 const Companies = () => {
   const columns = [
@@ -31,7 +32,7 @@ const Companies = () => {
    },
    {
      field: "details",
-     headerName: " ",
+     headerName: <img src={Filter} alt="" /> ,
      flex: 0.5,
      renderCell: ({ row: { details } }) => {
           return (
@@ -56,6 +57,7 @@ const Companies = () => {
   return (
     <Layout showStat={true}>
       <div className="m-14 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[80%]">
+
         <Box m="16px">
           <h1 className="font-bold">Companies</h1>
           <Box

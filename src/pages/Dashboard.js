@@ -6,6 +6,7 @@ import { dashboardData } from "../Utils/formData.js";
 
 import Graph from '../images/dash/Graph.svg'
 import Layout from "../components/Layout.js";
+import Filter from "../images/dash/Filter.svg";
 
 const Dashboard = () =>{
   const columns = [
@@ -34,7 +35,7 @@ const Dashboard = () =>{
    },
    {
      field: "details",
-     headerName: " ",
+     headerName: <img src={Filter} alt="" />,
      flex: 0.5,
      renderCell: ({ row: { details } }) => {
           return (
