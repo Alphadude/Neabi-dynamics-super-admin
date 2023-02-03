@@ -61,7 +61,7 @@ const Dashboard = () =>{
       <section className="m-12 flex flex-col gap-60">
         <div>
           <div className="p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[120px]">
-            <h1 className="pb-4">Invoice Avalibility</h1>
+            <h1 className="pb-4 text-blue-300">Invoice Avalibility</h1>
             <div className ="flex gap-2">
               <div className="border-2 rounded-lg">
                 <select name="Invoice" id="invoice" value="invoice" className="text-sm indent-4 bg-[#FFFFFF] text-[#737373] w-full border-1 rounded-sm border-[#E6E6E6] hover:border-[#F4511E] focus:border-[#F4511E] w-56 px-3 py-2">
