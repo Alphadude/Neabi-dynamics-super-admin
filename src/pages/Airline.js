@@ -1,6 +1,6 @@
 import { Box, Button } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import { companiesData } from "../Utils/formData.js";
+import { airlineData } from "../Utils/formData.js";
 
 import Layout from "../components/Layout.js";
 
@@ -39,10 +39,10 @@ const Companies = () => {
               variant="contained"
               href="#contained-buttons"
               style={{
+                  padding: "12px 25px",
+                  fontSize: "12px",
                   borderRadius: "4px",
                   backgroundColor: "#006AFF",
-                  padding: "12px 25px",
-                  fontSize: "12px"
               }}
               >
               Details
@@ -55,9 +55,9 @@ const Companies = () => {
 
   return (
     <Layout showStat={true} >
-    <div className="m-6 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[80%]">
+    <div className="m-14 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[80%]">
       <Box m="16px">
-        <h1 className="font-bold"> Companies</h1>
+        <h1 className="font-bold">AIRLINES</h1>
         <Box
           m="10px 0 0 0"
           height="73vh"
@@ -80,7 +80,7 @@ const Companies = () => {
           }}
           >
              <DataGrid
-              rows={companiesData}
+              rows={airlineData}
               columns={columns}
               />
           </Box>

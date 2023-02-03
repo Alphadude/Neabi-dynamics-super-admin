@@ -20,7 +20,7 @@ const Stat = () =>{
   return(
     <section className="ml-60" >
       <div className=" h-[100vh] md:w-96 md:h-max bg-[#F8F7F1] shadow-sm px-10 py-4">
-        <div className="mx-auo ">
+        <div className="mx-auto ">
           <h1 className="text-[16px] font-[500] leading-7 text-[#525256]">Todays Statistics</h1>
           <p className="text-[12px] font-[400] leading-7 text-[#A3A3A3]">Tue, 14 Nov. 2022. 11.30AM</p>
         </div>

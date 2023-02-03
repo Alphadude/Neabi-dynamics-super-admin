@@ -13,7 +13,7 @@ const SettingsPage = () => {
 
     return (
       <Layout showStat={false}>
-        <section className="mx-8 mt-12 p-8 bg-white text-black shadow-lg h-[665px] w-[72vw] top-6 ml-[280px] m-10">
+        <section className="mx-8 mt-12 p-8 bg-white text-black shadow-lg h-[665px] w-[72vw] top-6 ml-[330px] m-10">
 
             {step === 1 && (
                 <div>

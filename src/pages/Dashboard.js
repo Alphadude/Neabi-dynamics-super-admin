@@ -57,7 +57,7 @@ const Dashboard = () =>{
 
   return(
     <Layout showStat={true}>
-      <section className="flex flex-col gap-60">
+      <section className="m-12 flex flex-col gap-60">
         <div>
           <div className="p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[120px]">
             <h1 className="pb-4">Invoice Avalibility</h1>
@@ -83,7 +83,7 @@ const Dashboard = () =>{
             </div>
           </div>
 
-          <div className="mt-2 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[63%]">
+          <div className="mt-2 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[47%]">
           <Box m="14px">
             <h1 className="font-bold">HMO on duty</h1>
             <Box
@@ -114,7 +114,7 @@ const Dashboard = () =>{
           </Box>
           </div>
 
-          <div className="mx-auto absolute z-20 w-[52vw] h-40">
+          <div className="mx-0 w-[100%] h-40">
             <img src={Graph} alt="" />
           </div>
         </div>

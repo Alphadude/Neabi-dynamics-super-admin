@@ -10,8 +10,8 @@ const User = () => {
         <h1 className="pt-8 text-[16px] font-bold pl-4 leading-6">Add a new user</h1>
         <div>
           <form>
-            <div className="">
-              <div className=" flex gap-4 pt-8">
+            <div className="mx-[15%]">
+              <div className="flex gap-4 pt-8">
 
                 <div className="flex flex-col">
                 <label for="name" className="text-[12px] md:text-[16px] leading-6 pb-1"> First Name</label>
@@ -58,12 +58,12 @@ const User = () => {
                   </div>
 
 
-                    <div className="flex gap-6 pt-8">
-                      <button className="text-white bg-[#0B1C2E] hover:text-[#0B1C2E] hover:bg-white border-2 rounded-lg border-[#979699] w-[42vw] md:w-[327px] h-1/2 md:h-[38px] px-6 py-2 ">
+                    <div className="flex gap-6 pt-20">
+                      <button className="text-white bg-[#0B1C2E] hover:text-[#0B1C2E] hover:bg-white hover:border-[#0B1C2E] border-2 rounded-lg border-[#979699] w-[42vw] md:w-[85%] h-1/2 md:h-[55px] px-6 py-2 ">
                         Submit
                       </button>
 
-                      <button className="hover:text-white text-[#0B1C2E] bg-white hover:bg-[#0B1C2E] border-2 rounded-lg border-[#0B1C2E] w-[40vw] md:w-[327px] h-1/2 md:h-[38px] px-6 py-2 ">
+                      <button className="hover:text-white text-[#0B1C2E] bg-white hover:bg-[#0B1C2E] border-2 rounded-lg border-[#0B1C2E] w-[40vw] md:w-[85%] h-1/2 md:h-[55px] px-6 py-2 ">
                         Cancel
                       </button>
                     </div>
