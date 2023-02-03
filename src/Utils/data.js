@@ -59,7 +59,7 @@ import Airline from '../images/sideBar/Airline.svg'
       com:'Compared to $9940 yesterday',
       week:'Last week Income',
       income:'$25658.00',
-      p:'text-[#FF2727] text-[12px] font-[500] leading-5 mt-6'
+      p:'text-[#FF2727] text-[12px] font-[500] leading-5 mt-6 transition transform duration-300 animate-bounce'
     },
     {
       name:'Current',
@@ -68,7 +68,7 @@ import Airline from '../images/sideBar/Airline.svg'
       com:'Compared to $5240 yesterday',
       week:'Last week',
       income:'$22658.00',
-      p:'text-[#52C93F] text-[12px] font-[500] leading-5 mt-6'
+      p:'text-[#52C93F] text-[12px] font-[500] leading-5 mt-6 transition transform duration-300 animate-bounce'
     }
   ]
   const Gen = [
@@ -78,7 +78,7 @@ import Airline from '../images/sideBar/Airline.svg'
       value:'54%',
       pv:'text-[12px] leading-6',
       raise:'↑',
-      pr:'text-[#FF2727]  text-[14px] leading-4'
+      pr:'text-[#FF2727]  text-[14px] leading-4 transition transform duration-300 animate-bounce'
     },
     {
       span:'mt-1 absolute z-50 flex h-3 w-3 items-center justify-center rounded-full bg-[#52C93F]',
@@ -86,7 +86,7 @@ import Airline from '../images/sideBar/Airline.svg'
       value:'20%',
       pv: 'ml-10 text-[12px]',
       raise:'↑',
-      pr:'text-[#FF2727] text-[12px] leading-4'
+      pr:'text-[#FF2727] text-[12px] leading-4 transition transform duration-300 animate-bounce'
     },
     {
       span:'mt-1 absolute z-50 flex h-3 w-3 items-center justify-center rounded-full bg-[#FF2727]',
@@ -94,7 +94,7 @@ import Airline from '../images/sideBar/Airline.svg'
       value:'26%',
       pv:'ml-4 text-[12px] leading-6',
       raise:'↓',
-      pr:'text-[#52C93F] text-[12px] leading-4'
+      pr:'text-[#52C93F] text-[12px] leading-4 transition transform duration-300 animate-bounce'
     }
   ]
   export {Nav, Extra, Stats, Gen}
