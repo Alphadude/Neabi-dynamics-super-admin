@@ -2,7 +2,9 @@ import React from 'react'
 
 import { DataGrid } from '@mui/x-data-grid'
 import Layout from '../components/Layout'
+import axios from 'axios'
 const Dashboard = () =>{
+  
   return(
     <Layout showStat={true}>
       <section className="flex flex-col gap-60">

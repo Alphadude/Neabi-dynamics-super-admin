@@ -1,21 +1,53 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
+import axios from "axios"
 import{ RiEyeCloseLine } from 'react-icons/ri'
 import { BsEyeFill } from 'react-icons/bs'
 import Logo from '../images/Nav/logo.svg'
+import Swal from 'sweetalert2'
 
 const Auth = () =>{
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios({
+      url:"http://localhost:4000/api/v1/admin/login",
+      method:"POST",
+      data:{email,password}
+    })
+    .then((data)=>{
+      localStorage.setItem("token", data.data.token)
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Successful',
+        text:"Welcome to Neabi Dynamics concept limited",
+        showConfirmButton: false,
+        timer: 1500
+      })
+      .then(()=>{navigate("/dashboard")})
+    })
+    .catch(err=>{
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Sign in',
+        text:"Sorry, we can’t find an account with this email address, please try again or create a new account.",
+        showConfirmButton: false,
+        timer: 1500
+      })
+      .then(()=>{window.location.reload()})
+    })
   }
   const togglePassword = () => {
     setShowPassword(!showPassword)
   }
   return(
-    <section>
+    <section className='w-screen'>
       <Link to="/">
         <div className="flex m-8">
             <img src={Logo} alt="Naebi's Logo" />
@@ -24,16 +56,16 @@ const Auth = () =>{
       </Link>
 
       {/*Sign-in form*/}
-      <div className="mx-auto items-center justify-center  border-2 rounded-[20px] shadow-xl h-1/2 w-[80vw] md:h-[492px] md:w-[492px]">
+      <div className=" mx-auto items-center justify-center  border-2 rounded-[20px] shadow-xl h-fit w-[80vw] md:h-[492px] md:w-[492px] ml-[10%] md:ml-[30%]">
         <h1 className="text-[#0B1C2E] text-[20px] md:text-[32px] text-center leading-8 pt-8">Sign in</h1>
         <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center ">
           <div className="flex flex-col pt-4 md:pt-8">
             <label for="email" className="text-[16px] md:text-[20px] leading-6 pb-1"> Email Address</label>
-            <input type="text" className="bg-[#D9D9D9] border-2 rounded-lg border-[#979699] w-[60vw] md:w-[395px] h-1/2 md:h-[57px] px-6 py-2 " />
+            <input type="email" onChange={(e)=>{setEmail(e.target.value)}} value={email} required className="bg-[#D9D9D9] border-2 rounded-lg border-[#979699] w-[60vw] md:w-[395px] h-1/2 md:h-[57px] px-6 py-2 " />
           </div>
           <div className="flex flex-col pt-4 md:pt-8">
             <label for="password" className="text-[16px] md:text-[20px] leading-6 pb-1"> Password</label>
-            <input type={showPassword ? "text" : "password"} className="relative bg-[#D9D9D9] border-2 rounded-lg border-[#979699] px-6 py-2 w-[60vw] md:w-[395px] h-1/2 md:h-[57px] " />
+            <input type={showPassword ? "text" : "password"} value={password} onChange={(e)=>{setPassword(e.target.value)}}  required className="relative bg-[#D9D9D9] border-2 rounded-lg border-[#979699] px-6 py-2 w-[60vw] md:w-[395px] h-1/2 md:h-[57px] " />
             <div className="" onClick={togglePassword}>
               {showPassword ?
                 <BsEyeFill className="absolute cursor-pointer text-[26px] md:text-[32px] top-80 right-[90px] md:right-[534px] md:top-96 pt-3 md:pt-2 "/> :
@@ -43,11 +75,11 @@ const Auth = () =>{
           </div>
           <p className="text-[12px] md:text-[20px] text-[#525256] pt-2 pl-32 md:pl-64 transform duration-200 hover:scale-105"> Forgot Password?</p>
 
-          <Link to="/dashboard">
+          {/* <Link to="/dashboard"> */}
             <button type="submit" className="bg-[#0B1C2E] text-white hover:text-[#0B1C2E] hover:bg-white hover:border-[#0B1C2E] hover:border-2 rounded-lg w-[60vw] md:w-[395px] h-[38px] md:h-[57px] mt-4 mb-8 md:mb-0">
                 Sign In
             </button>
-          </Link>
+          {/* </Link> */}
         </form>
 
       </div>

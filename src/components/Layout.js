@@ -4,6 +4,7 @@ import Stat from "./Stat";
 import TopBar from "./TopBar";
 
 function Layout({ children, showStat }) {
+    
   return (
     <>
     <div className ="side">
