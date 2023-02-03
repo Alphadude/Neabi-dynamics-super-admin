@@ -68,8 +68,8 @@ const Auth = () =>{
             <input type={showPassword ? "text" : "password"} value={password} onChange={(e)=>{setPassword(e.target.value)}}  required className="relative bg-[#D9D9D9] border-2 rounded-lg border-[#979699] px-6 py-2 w-[60vw] md:w-[300px] h-1/2 md:h-[50px] " />
             <div className="b" onClick={togglePassword}>
               {showPassword ?
-                <BsEyeFill className="absolute cursor-pointer text-[26px] md:text-[32px] top-16 right-[90px] md:right-[41%] md:top-[380px] pt-3 md:pt-2 md:mt-6"/> :
-                <RiEyeCloseLine className="absolute cursor-pointer text-[26px] md:text-[32px] top-16 right-[90px] md:right-[41%] md:top-[380px]  pt-3 md:pt-2 md:mt-6"/>
+                <BsEyeFill className="absolute cursor-pointer text-[26px] md:text-[32px] top-top-[355px] right-[90px] md:right-[41%] md:top-[380px] pt-3 md:pt-2 md:mt-6"/> :
+                <RiEyeCloseLine className="absolute cursor-pointer text-[26px] md:text-[32px] top-[355px] right-[90px] md:right-[41%] md:top-[380px]  pt-3 md:pt-2 md:mt-6"/>
             }
             </div>
           </div>
