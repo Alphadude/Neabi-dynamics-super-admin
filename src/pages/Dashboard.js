@@ -1,7 +1,12 @@
 import React from 'react'
 
-import { DataGrid } from '@mui/x-data-grid'
-import Layout from '../components/Layout'
+import { Box, Button } from "@mui/material";
+import { DataGrid } from "@mui/x-data-grid";
+import { dashboardData } from "../Utils/formData.js";
+
+import Graph from '../images/dash/Graph.svg'
+import Layout from "../components/Layout.js";
+
 const Dashboard = () =>{
   const columns = [
     {field: "number", headerName: "No" },
@@ -44,11 +49,11 @@ const Dashboard = () =>{
     <Layout showStat={true}>
       <section className="flex flex-col gap-60">
         <div>
-          <div className="p-6 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[160px]">
-            <h1 className="pb-8">Invoice Avalibility</h1>
+          <div className="p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[120px]">
+            <h1 className="pb-4">Invoice Avalibility</h1>
             <div className ="flex gap-2">
               <div className="border-2 rounded-lg">
-                <select name="Invoice" id="invoice" value="invoice" className="text-sm indent-4 py-2 bg-[#FFFFFF] text-[#737373] w-full border-1 rounded-sm border-[#E6E6E6] hover:border-[#F4511E] focus:border-[#F4511E] w-56 px-4 py-2">
+                <select name="Invoice" id="invoice" value="invoice" className="text-sm indent-4 bg-[#FFFFFF] text-[#737373] w-full border-1 rounded-sm border-[#E6E6E6] hover:border-[#F4511E] focus:border-[#F4511E] w-56 px-3 py-2">
                   <option value="">Invoice number</option>
                 </select>
               </div>
@@ -65,8 +70,23 @@ const Dashboard = () =>{
                   Check
                 </button>
               </div>
-
             </div>
+          </div>
+
+          <div className="mt-2 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[310px]">
+          <Box m="14px">
+            <h1 className="font-bold">HMO on duty</h1>
+            <Box m="5px 0 0 0" height="32vh">
+               <DataGrid
+                rows={dashboardData}
+                columns={columns}
+                />
+            </Box>
+          </Box>
+          </div>
+
+          <div className="mx-auto absolute z-20 w-[52vw] h-40">
+            <img src={Graph} alt="" />
           </div>
         </div>
       </section>

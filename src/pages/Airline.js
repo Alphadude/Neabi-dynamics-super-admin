@@ -45,10 +45,10 @@ const Companies = () => {
 
   return (
     <Layout showStat={true} >
-      <div className="mt-32 border-2 border-white shadow-lg rounded-sm  p-6 bg-white">
+      <div className="m-6 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white">
         <Box m="16px">
           <h1 className="font-bold"> AIRLINES</h1>
-          <Box m="10px 0 0 0" height="75vh">
+          <Box m="10px 0 0 0" height="65vh" width="45vw">
              <DataGrid
               rows={companiesData}
               columns={columns}
