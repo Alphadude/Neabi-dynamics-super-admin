@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .menu-item{
+    @apply md:mx-5 md:my-1 text-center cursor-pointer flex items-center transform transition duration-100 hover:border-2 hover:border-[#006AFF] hover:rounded-lg hover:bg-[#006AFF]
+  }
+  .sideBar .active {
+    @apply border-2 border-[#006AFF] rounded-lg bg-[#006AFF]
+  }
+
+  .sideBar .active::before {
+    @apply relative text-white text-[0.5rem] content-["0"] w-[4px] h-[40px] bg-white ml-0 border-white rounded-lg
+  }
+
+  .App {
+  @apply flex
+  }
+
+  .side{
+    @apply w-[45%]
+  }
+
+  .content {
+    @apply w-[57%] p-[20px]
+  }
+
+
+}
