@@ -13,9 +13,6 @@ import Companies from './pages/Companies'
 import Airlines from './pages/Airline'
 import Settings from './pages/Settings'
 
-import Nav from './components/SideBar'
-import Top from './components/TopBar'
-import Stat from './components/Stat'
 
 const App = () => {
   return (

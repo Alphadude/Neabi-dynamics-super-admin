@@ -1,4 +1,31 @@
 
+export const dashboardData = [
+  {
+    id: 1,
+    number: "01",
+    code: "6465",
+    name: "soibi marks",
+    email: "soibi@naebidynamic.com",
+    details: "Details",
+  },
+  {
+    id: 2,
+    number: "02",
+    code: "5665",
+    name: "Henry Nwosu",
+    email: "Hnwosu@naebidynamic.com",
+    details: "Details",
+  },
+  {
+    id: 3,
+    number: "03",
+    code: "1785",
+    name: "Ovunda Tom",
+    email: "tovunda@naebidynamic.com",
+    details: "Details",
+  },
+]
+
 export const companiesData = [
   {
     id: 1,

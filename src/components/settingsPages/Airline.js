@@ -1,7 +1,5 @@
 import React from 'react'
 
-import handlePrevStep from "../../pages/Settings"
-
 const Airline = () => {
 
   return (
