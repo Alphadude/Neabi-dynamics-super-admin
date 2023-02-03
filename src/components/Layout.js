@@ -6,7 +6,7 @@ import TopBar from "./TopBar";
 function Layout({ children, showStat }) {
 
   return (
-    <>
+    <div className="w-[100vw] h-[100vh] overflow-x-hidden">
     <div className ="side">
       <SideBar />
       {/* <TopBar /> */}
@@ -15,7 +15,7 @@ function Layout({ children, showStat }) {
       {showStat === true ? <Stat /> : ``}
         {children}
         </main>
-    </>
+    </div>
   );
 }
 

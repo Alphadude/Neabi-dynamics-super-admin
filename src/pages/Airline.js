@@ -4,7 +4,7 @@ import { airlineData } from "../Utils/formData.js";
 
 import Layout from "../components/Layout.js";
 import Filter from "../images/dash/Filter.svg";
- 
+
 const Companies = () => {
   const columns = [
     {field: "number", headerName: "No", flex: 0.2, },
@@ -56,13 +56,13 @@ const Companies = () => {
 
   return (
     <Layout showStat={true} >
-    <div className="m-14 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[80%]">
+    <div className="m-8 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white w-[50vw] h-[80%]">
       <Box m="16px">
         <h1 className="font-bold">AIRLINES</h1>
         <Box
           m="10px 0 0 0"
           height="73vh"
-          width="45vw"
+          width="100%"
           sx={{
             "& .MuiDataGrid-root": {
               border: "none",
