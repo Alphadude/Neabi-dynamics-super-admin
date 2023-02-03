@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Button } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { dashboardData } from "../Utils/formData.js";
 
 import Graph from '../images/dash/Graph.svg'
@@ -110,6 +110,7 @@ const Dashboard = () =>{
                <DataGrid
                 rows={dashboardData}
                 columns={columns}
+
                 />
             </Box>
           </Box>

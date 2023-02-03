@@ -76,25 +76,25 @@ import Airline from '../images/sideBar/Airline.svg'
       span:'mt-1 absolute z-50 flex h-3 w-3 items-center justify-center rounded-full bg-[#006AFF]',
       p:'Invoice generated',
       value:'54%',
-      pv:'text-[12px] leading-6',
+      pv:'ml-2 text-[12px] leading-6',
       raise:'↑',
-      pr:'text-[#FF2727]  text-[14px] leading-4 transition transform duration-300 animate-bounce'
+      pr:'text-[#FF2727]  text-[14px] leading-4 transition transform duration-300 animate-bounce pt-2'
     },
     {
       span:'mt-1 absolute z-50 flex h-3 w-3 items-center justify-center rounded-full bg-[#52C93F]',
       p:'Invoice paid',
       value:'20%',
-      pv: 'ml-10 text-[12px]',
+      pv: 'pt-1 ml-10 text-[12px]',
       raise:'↑',
-      pr:'text-[#FF2727] text-[12px] leading-4 transition transform duration-300 animate-bounce'
+      pr:'text-[#FF2727] text-[12px] leading-4 transition transform duration-300 animate-bounce pt-2'
     },
     {
       span:'mt-1 absolute z-50 flex h-3 w-3 items-center justify-center rounded-full bg-[#FF2727]',
       p:'Invoice pending',
       value:'26%',
-      pv:'ml-4 text-[12px] leading-6',
+      pv:'ml-5 text-[12px] leading-6',
       raise:'↓',
-      pr:'text-[#52C93F] text-[12px] leading-4 transition transform duration-300 animate-bounce'
+      pr:'text-[#52C93F] text-[12px] leading-4 transition transform duration-300 animate-bounce pt-2'
     }
   ]
   export {Nav, Extra, Stats, Gen}
