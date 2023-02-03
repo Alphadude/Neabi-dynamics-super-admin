@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import { Nav, Extra } from '../Utils/data.js'
 import Logo from '../images/Nav/logo.svg'
@@ -22,20 +22,22 @@ const SideBar = () =>{
         {/*Navigation*/}
         <div className="flex flex-col">
           {Nav.map ((item, index) =>(
-            <div
-              className={selected === index ? "menu-item active" : "menuItem"}
+            <NavLink
+              activeClassName="menu-item active"
+              className="menuItem"
               key={index}
-              onClick={() => setSelected(index)}
+              onClick={() => {setSelected(index)}}
+              to={item.link}
               >
-            <Link to={item.link}>
+            {/* <Link to={item.link}> */}
               <div className="flex menu-item gap-2">
                 <div className="flex m-2  md:pl-2  md:py-2">
                   <img src={item.src} alt="" className="" />
                   <p className="hidden md:flex text-white text-center justify-center ml-2 text-[16px] leading-5 font-[500]">{item.name}</p>
                 </div>
               </div>
-            </Link>
-          </div>
+            {/* </Link> */}
+          </NavLink>
         ))};
       </div>
 

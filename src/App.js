@@ -22,12 +22,6 @@ const App = () => {
     <>
     <div className="App">
     <Router>
-    <div className ="side">
-      <Nav />
-      <Stat />
-    </div>
-      <main className="content">
-        <Top />
           <Routes>
             <Route path="/"
               exact element={<Auth />} />
@@ -42,7 +36,6 @@ const App = () => {
             <Route path="/HMO"
                 exact element={<HMO />} />
           </Routes>
-        </main>
       </Router>
     </div>
     </>

@@ -18,9 +18,9 @@
   @apply flex
   }
 
-  .side{
+  /* .side{
     @apply w-[45%]
-  }
+  } */
 
   .content {
     @apply w-[57%] p-[20px]
