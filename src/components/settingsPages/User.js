@@ -10,8 +10,8 @@ const User = () => {
         <h1 className="pt-8 text-[16px] font-bold pl-4 leading-6">Add a new user</h1>
         <div>
           <form>
-            <div className="mx-auto">
-              <div className="flex gap-4 pt-8">
+            <div className="">
+              <div className=" flex gap-4 pt-8">
 
                 <div className="flex flex-col">
                 <label for="name" className="text-[12px] md:text-[16px] leading-6 pb-1"> First Name</label>

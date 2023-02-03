@@ -56,7 +56,7 @@ const Auth = () =>{
       </Link>
 
       {/*Sign-in form*/}
-      <div className=" mx-auto items-center justify-center  border-2 rounded-[20px] shadow-xl h-fit w-[80vw] md:h-[492px] md:w-[492px] ml-[10%] md:ml-[30%]">
+      <div className=" mx-auto items-center justify-center  border-2 rounded-[20px] shadow-xl h-fit w-[80vw] md:h-[492px] md:w-[492px] ml-[10%] md:ml-[34%]">
         <h1 className="text-[#0B1C2E] text-[20px] md:text-[32px] text-center leading-8 pt-8">Sign in</h1>
         <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center ">
           <div className="flex flex-col pt-4 md:pt-8">
@@ -66,10 +66,10 @@ const Auth = () =>{
           <div className="flex flex-col pt-4 md:pt-8">
             <label for="password" className="text-[16px] md:text-[20px] leading-6 pb-1"> Password</label>
             <input type={showPassword ? "text" : "password"} value={password} onChange={(e)=>{setPassword(e.target.value)}}  required className="relative bg-[#D9D9D9] border-2 rounded-lg border-[#979699] px-6 py-2 w-[60vw] md:w-[395px] h-1/2 md:h-[57px] " />
-            <div className="" onClick={togglePassword}>
+            <div className="b" onClick={togglePassword}>
               {showPassword ?
-                <BsEyeFill className="absolute cursor-pointer text-[26px] md:text-[32px] top-80 right-[90px] md:right-[534px] md:top-96 pt-3 md:pt-2 "/> :
-                <RiEyeCloseLine className="absolute cursor-pointer text-[26px] md:text-[32px] top-80 right-[90px] md:right-[534px] md:top-96  pt-3 md:pt-2 "/>
+                <BsEyeFill className="absolute cursor-pointer text-[26px] md:text-[32px] top-80 right-[90px] md:right-[532px] md:top-96 pt-3 md:pt-2 "/> :
+                <RiEyeCloseLine className="absolute cursor-pointer text-[26px] md:text-[32px] top-80 right-[90px] md:right-[532px] md:top-96  pt-3 md:pt-2 "/>
             }
             </div>
           </div>
@@ -81,10 +81,11 @@ const Auth = () =>{
             </button>
           {/* </Link> */}
         </form>
+      </div>
 
-      </div>
       <p className="text-center mt-2">New here? <a href="/sign-out" className="hover:border-b-2 hover:border-[#0B1C2E]">Sign up</a></p>
-      </div>
+
+
     </section>
   )
 }

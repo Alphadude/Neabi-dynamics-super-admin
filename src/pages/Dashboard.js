@@ -66,17 +66,17 @@ const Dashboard = () =>{
                 </select>
               </div>
               <div className="border-2 rounded-lg">
-                <button className="bg-blue-500 text-white px-6 py-2">
+                <button className="bg-blue-500 text-white px-6 py-2 hover:bg-blue-700">
                   Check
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="mt-2 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[310px]">
+          <div className="mt-2 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[72%]">
           <Box m="14px">
             <h1 className="font-bold">HMO on duty</h1>
-            <Box m="5px 0 0 0" height="32vh">
+            <Box m="5px 0 0 0" height="34vh">
                <DataGrid
                 rows={dashboardData}
                 columns={columns}
