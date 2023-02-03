@@ -47,7 +47,7 @@ import Airline from '../images/sideBar/Airline.svg'
     {
       src: Settings,
       name: 'Settings',
-      link: '/g'
+      link: '/settings'
     }
   ]
 
@@ -59,7 +59,7 @@ import Airline from '../images/sideBar/Airline.svg'
       com:'Compared to $9940 yesterday',
       week:'Last week Income',
       income:'$25658.00',
-      p:'text-[#FF2727] text-[16px] font-[500] leading-5 mt-6'
+      p:'text-[#FF2727] text-[12px] font-[500] leading-5 mt-6'
     },
     {
       name:'Current',
@@ -68,33 +68,33 @@ import Airline from '../images/sideBar/Airline.svg'
       com:'Compared to $5240 yesterday',
       week:'Last week',
       income:'$22658.00',
-      p:'text-[#52C93F] text-[16px] font-[500] leading-5 mt-6'
+      p:'text-[#52C93F] text-[12px] font-[500] leading-5 mt-6'
     }
   ]
   const Gen = [
     {
-      span:'mt-1 absolute z-50 flex h-4 w-4 items-center justify-center rounded-full bg-[#006AFF]',
+      span:'mt-1 absolute z-50 flex h-3 w-3 items-center justify-center rounded-full bg-[#006AFF]',
       p:'Invoice generated',
       value:'54%',
-      pv:'text-[16px] leading-6',
+      pv:'text-[12px] leading-6',
       raise:'↑',
       pr:'text-[#FF2727]  text-[14px] leading-4'
     },
     {
-      span:'mt-1 absolute z-50 flex h-4 w-4 items-center justify-center rounded-full bg-[#52C93F]',
+      span:'mt-1 absolute z-50 flex h-3 w-3 items-center justify-center rounded-full bg-[#52C93F]',
       p:'Invoice paid',
       value:'20%',
-      pv: 'ml-10',
+      pv: 'ml-10 text-[12px]',
       raise:'↑',
-      pr:'text-[#FF2727]  text-[14px] leading-4'
+      pr:'text-[#FF2727] text-[12px] leading-4'
     },
     {
-      span:'mt-1 absolute z-50 flex h-4 w-4 items-center justify-center rounded-full bg-[#FF2727]',
+      span:'mt-1 absolute z-50 flex h-3 w-3 items-center justify-center rounded-full bg-[#FF2727]',
       p:'Invoice pending',
       value:'26%',
-      pv:'ml-4 text-[16px] leading-6',
+      pv:'ml-4 text-[12px] leading-6',
       raise:'↓',
-      pr:'text-[#52C93F] text-[14px] leading-4'
+      pr:'text-[#52C93F] text-[12px] leading-4'
     }
   ]
   export {Nav, Extra, Stats, Gen}

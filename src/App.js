@@ -20,25 +20,13 @@ import Stat from './components/Stat'
 const App = () => {
   return (
     <>
-
-    <Router>
-    <div className="Hide">
-    <Routes>
-      <Route path="/"
-        exact element={<Auth />} />
-
-    </Routes>
-    </div>
     <div className="App">
-    <div className ="side">
-      <Nav />
-      <Stat />
-    </div>
-      <main className="content">
-        <Top />
+    <Router>
           <Routes>
-          <Route path="/settings"
-            exact element={<Settings />} />
+            <Route path="/"
+              exact element={<Auth />} />
+            <Route path="/settings"
+              exact element={<Settings />} />
             <Route path="/dashboard"
                 exact element={<Dashboard />} />
             <Route path="/airlines"
@@ -48,11 +36,8 @@ const App = () => {
             <Route path="/HMO"
                 exact element={<HMO />} />
           </Routes>
-        </main>
-        </div>
-
       </Router>
-
+    </div>
     </>
   );
 }
