@@ -15,7 +15,7 @@
   }
 
   .App {
-  @apply flex overflow-hidden
+  @apply flex overflow-hidden overflow-y-hidden
   }
 
   /* .side{

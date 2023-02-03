@@ -35,7 +35,7 @@ const Dashboard = () =>{
    },
    {
      field: "details",
-     headerName: <img src={Filter} alt="" className="h-full w-full"/>,
+     headerName: <img src={Filter} alt="" />,
      flex: 0.5,
      renderCell: ({ row: { details } }) => {
           return (
