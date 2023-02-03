@@ -47,7 +47,7 @@ import Airline from '../images/sideBar/Airline.svg'
     {
       src: Settings,
       name: 'Settings',
-      link: '/settings'
+      link: '/setings'
     }
   ]
 

@@ -1,8 +1,8 @@
-import { Box, Button } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { Box, Typography,Button } from "@mui/material";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import Layout from "../components/Layout.js";
 import { managementData } from "../Utils/formData.js";
 
-import Layout from "../components/Layout.js";
 
 const Companies = () => {
   const columns = [
@@ -45,17 +45,15 @@ const Companies = () => {
 
   return (
     <Layout showStat={true}>
-      <div className="m-6 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white">
-        <Box m="16px">
+        <Box m="20px" className="w-[45vw]">
           <h1 className="font-bold">Helicopter Management Officer</h1>
-          <Box m="10px 0 0 0" height="65vh" width="45vw">
-             <DataGrid
+          <Box m="40px 0 0 0" height="80vh">
+            <DataGrid
               rows={managementData}
               columns={columns}
               />
           </Box>
         </Box>
-      </div>
     </Layout>
   );
 };
