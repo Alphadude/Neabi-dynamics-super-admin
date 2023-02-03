@@ -9,32 +9,33 @@ import Layout from "../components/Layout.js";
 
 const Dashboard = () =>{
   const columns = [
-    {field: "number", headerName: "No" },
+    {field: "number", headerName: "No", flex: 0.2,},
     {
       field: "code",
       headerName: "Code",
       type: "number",
       headerAlign: "left",
       align: "left",
+      flex: 0.4,
     },
     {
      field: "name",
      headerName: "Full Name",
-     flex: 1,
+     flex: 1.16,
      cellClassName: "name-column--cell",
    },
    {
      field: "email",
      headerName: "Email",
      type: "number",
-     flex: 1,
+     flex: 1.8,
      headerAlign: "left",
      align: "left",
    },
    {
      field: "details",
      headerName: " ",
-     flex: 1,
+     flex: 0.5,
      renderCell: ({ row: { details } }) => {
           return (
             <Button variant="contained" href="#contained-buttons">
@@ -73,10 +74,29 @@ const Dashboard = () =>{
             </div>
           </div>
 
-          <div className="mt-2 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[72%]">
+          <div className="mt-2 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[63%]">
           <Box m="14px">
             <h1 className="font-bold">HMO on duty</h1>
-            <Box m="5px 0 0 0" height="34vh">
+            <Box
+              m="5px 0 0 0"
+              height="34vh"
+              sx={{
+                "& .MuiDataGrid-root": {
+                  border: "none",
+                },
+                "& .MuiDataGrid-cell": {
+                  borderTop: "none",
+                },
+                "& .MuiDataGrid-columnHeaders": {
+
+                  borderTop: "none",
+                },
+                "& .MuiDataGrid-footerContainer": {
+                  borderTop: "none",
+                  display:"none",
+                },
+              }}
+              >
                <DataGrid
                 rows={dashboardData}
                 columns={columns}
