@@ -36,7 +36,7 @@ const Dashboard = () =>{
    {
      field: "details",
      headerName: <img src={Filter} alt="" />,
-     flex: 0.5,
+     flex: 0.6,
      renderCell: ({ row: { details } }) => {
           return (
             <Button
@@ -46,7 +46,7 @@ const Dashboard = () =>{
                   borderRadius: "4px",
                   backgroundColor: "#006AFF",
                   padding: "12px 25px",
-                  fontSize: "12px"
+                  fontSize: "9px"
               }}
               >
               Details
@@ -58,21 +58,21 @@ const Dashboard = () =>{
 
   return(
     <Layout showStat={true}>
-      <section className="m-12 flex flex-col gap-60">
+      <section className="m-2 p-2 flex flex-col gap-60 w-[53%]">
         <div>
           <div className="p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[120px]">
-            <h1 className="pb-4 text-blue-300">Invoice Avalibility</h1>
+            <h1 className="pb-4">Invoice Avalibility</h1>
             <div className ="flex gap-2">
               <div className="border-2 rounded-lg">
-                <select name="Invoice" id="invoice" value="invoice" className="text-sm indent-4 bg-[#FFFFFF] text-[#737373] w-full border-1 rounded-sm border-[#E6E6E6] hover:border-[#F4511E] focus:border-[#F4511E] w-56 px-3 py-2">
+                <select name="Invoice" id="invoice" value="invoice" className="text-sm indent-4 bg-[#FFFFFF] text-[#737373] border-1 rounded-sm border-[#E6E6E6] hover:border-[#F4511E] focus:border-[#F4511E] w-40 px-3 py-2">
                   <option value="">Invoice number</option>
                 </select>
               </div>
               <div className="flex border-2 rounded-lg">
-                <input name="Date" id="date" placeholder="Jan 20, 2022" className="text-sm indent-4 py-2 bg-[#FFFFFF] text-[#737373] w-full border-1 rounded-sm border-[#E6E6E6] hover:border-[#F4511E] focus:border-[#F4511E] border-r-2 w-56 px-12 py-2">
+                <input name="Date" id="date" placeholder="Jan 20, 2022" className="text-sm indent-4 py-2 bg-[#FFFFFF] text-[#737373] w-full border-1 rounded-sm border-[#E6E6E6] hover:border-[#F4511E] focus:border-[#F4511E] border-r-2 w-50 px-12 py-2">
                 </input>
 
-                <select name="Time" id="time" value="time" className="text-sm indent-4 py-2 bg-[#FFFFFF] text-[#737373] w-full border-1 rounded-sm border-[#E6E6E6] hover:border-[#F4511E] focus:border-[#F4511E] w-32 px-4 py-2">
+                <select name="Time" id="time" value="time" className="text-sm indent-4 py-2 bg-[#FFFFFF] text-[#737373] w-full border-1 rounded-sm border-[#E6E6E6] hover:border-[#F4511E] focus:border-[#F4511E] w-44 px-4 py-2">
                   <option value="">10AM</option>
                 </select>
               </div>

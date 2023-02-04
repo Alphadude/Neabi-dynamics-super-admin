@@ -12,7 +12,8 @@ import Dashboard from './pages/Dashboard'
 import Companies from './pages/Companies'
 import Airlines from './pages/Airline'
 import Settings from './pages/Settings'
-
+import Payment from './pages/Payment-details'
+import Notification from './pages/Notification'
 
 const App = () => {
   return (
@@ -32,6 +33,10 @@ const App = () => {
                 exact element={<Companies />} />
             <Route path="/HMO"
                 exact element={<HMO />} />
+            <Route path="/payment-details"
+                exact element={<Payment />} />
+            <Route path="/Notification"
+                exact element={<Notification />} />
           </Routes>
       </Router>
     </div>

@@ -12,7 +12,7 @@ const SideBar = () =>{
 
   return(
     <section className="sideBar">
-      <div className="fixed absolute w-10 h-screen md:w-60 bg-[#0B1C2E] shadow-sm">
+      <div className="fixed absolute w-10 h-[800px] md:w-60 bg-[#0B1C2E] shadow-sm">
         {/*Logo*/}
         <div className="flex m-2 w-6 pb-4 pt-4 md:px-10 md:w-full ">
             <img src={Logo} alt="Naebi's Logo" />

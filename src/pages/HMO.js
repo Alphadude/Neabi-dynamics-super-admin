@@ -33,7 +33,7 @@ const Companies = () => {
    {
      field: "details",
      headerName: <img src={Filter} alt="" />,
-     flex: 0.5,
+     flex: 0.6,
      renderCell: ({ row: { details } }) => {
           return (
             <Button
@@ -44,7 +44,7 @@ const Companies = () => {
                   borderRadius: "4px",
                   backgroundColor: "#006AFF",
                   padding: "12px 25px",
-                  fontSize: "12px"
+                  fontSize: "9px"
               }}
               >
               Details
@@ -57,9 +57,9 @@ const Companies = () => {
 
   return (
     <Layout showStat={true}>
-    <div className="m-14 p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white h-[80%]">
+    <div className="m-8 p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[53vw] h-[80%]">
       <Box m="16px">
-        <h1 className="font-bold"> Companies</h1>
+        <h1 className="font-bold">Helicopter Management Officer</h1>
         <Box
           m="10px 0 0 0"
           height="73vh"
