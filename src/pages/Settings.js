@@ -21,13 +21,13 @@ const SettingsPage = () => {
                 <div className="mt-12 flex flex-col text-[14px] leading-4">
 
                 <span className="cursor-pointer hover:opacity-50" onClick={() => setStep(2)}>Add new User</span>
-                <p className="border-b-2 my-6 w-[80%]"></p>
+                <p className="border-b-2 my-6 w-[95%]"></p>
                 <span className="cursor-pointer hover:opacity-50" onClick={() => setStep(3)}>Add new company</span>
-                <p className="border-b-2 my-6 w-[80%]"></p>
+                <p className="border-b-2 my-6 w-[95%]"></p>
                 <span className="cursor-pointer hover:opacity-50" onClick={() => setStep(4)}>Add new Airline</span>
-                <p className="border-b-2 my-6 w-[80%]"></p>
+                <p className="border-b-2 my-6 w-[95%]"></p>
                 <span className="cursor-pointer hover:opacity-50" onClick={() => setStep(5)}>Change Password</span>
-                <p className="border-b-2 my-6 w-[80%]"></p>
+                <p className="border-b-2 my-6 w-[95%]"></p>
                 </div>
                 </div>
               )}
