@@ -15,7 +15,7 @@ const Auth = () =>{
   const handleSubmit = (e) => {
     e.preventDefault();
     axios({
-      url:"http://localhost:4000/api/v1/admin/login",
+      url:"https://neabidynamicapi.devemmy.tech/api/v1/admin/login",
       method:"POST",
       data:{email,password}
     })
