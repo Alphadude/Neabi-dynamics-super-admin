@@ -5,7 +5,7 @@ import { airlineData } from "../Utils/formData.js";
 import Layout from "../components/Layout.js";
 import Filter from "../images/dash/Filter.svg";
 
-const Companies = () => {
+const Airlines = () => {
   const columns = [
     {field: "number", headerName: "No", flex: 0.2, },
     {
@@ -14,12 +14,12 @@ const Companies = () => {
       type: "number",
       headerAlign: "left",
       align: "left",
-      flex: 0.4,
+      flex: 0.7,
     },
     {
      field: "name",
      headerName: "Name",
-     flex: 1.16,
+     flex: 1.5,
      cellClassName: "name-column--cell",
    },
    {
@@ -39,9 +39,9 @@ const Companies = () => {
             <Button
               variant="contained"
               href="#contained-buttons"
-              style={{
+              sx={{
                   padding: "12px 25px",
-                  fontSize: "9px",
+                  fontSize: { xs: '8px', sm: '9px' },
                   borderRadius: "4px",
                   backgroundColor: "#006AFF",
               }}
@@ -56,7 +56,7 @@ const Companies = () => {
 
   return (
     <Layout showStat={true} >
-    <div className="m-8 p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[53%] h-[80%]">
+    <div className=" m-2 p-2 ml-16 md:ml-0 md:m-8 md:p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[95%] md:w-[53%] h-[80%]">
       <Box m="16px">
         <h1 className="font-bold">AIRLINES</h1>
         <Box
@@ -78,6 +78,7 @@ const Companies = () => {
               borderTop: "none",
               display:"none",
             },
+            
           }}
           >
              <DataGrid
@@ -91,4 +92,4 @@ const Companies = () => {
   );
 };
 
-export default Companies;
+export default Airlines;

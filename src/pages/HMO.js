@@ -5,7 +5,7 @@ import { managementData } from "../Utils/formData.js";
 import Layout from "../components/Layout.js";
 import Filter from "../images/dash/Filter.svg";
 
-const Companies = () => {
+const HMO = () => {
   const columns = [
     {field: "number", headerName: "No", flex: 0.2, },
     {
@@ -14,12 +14,12 @@ const Companies = () => {
       type: "number",
       headerAlign: "left",
       align: "left",
-      flex: 0.4,
+      flex: 0.7,
     },
     {
      field: "name",
      headerName: "Full Name",
-     flex: 1.16,
+     flex: 1.5,
      cellClassName: "name-column--cell",
    },
    {
@@ -44,7 +44,7 @@ const Companies = () => {
                   borderRadius: "4px",
                   backgroundColor: "#006AFF",
                   padding: "12px 25px",
-                  fontSize: "9px"
+                  fontSize: { xs: '8px', sm: '9px' },
               }}
               >
               Details
@@ -55,41 +55,43 @@ const Companies = () => {
     ];
 
 
-  return (
-    <Layout showStat={true}>
-    <div className="m-8 p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[53vw] h-[80%]">
-      <Box m="16px">
-        <h1 className="font-bold">Helicopter Management Officer</h1>
-        <Box
-          m="10px 0 0 0"
-          height="73vh"
-          width="45vw"
-          sx={{
-            "& .MuiDataGrid-root": {
-              border: "none",
-            },
-            "& .MuiDataGrid-cell": {
-              borderTop: "none",
-            },
-            "& .MuiDataGrid-columnHeaders": {
-
-              borderTop: "none",
-            },
-            "& .MuiDataGrid-footerContainer": {
-              borderTop: "none",
-              display:"none",
-            },
-          }}
-          >
-             <DataGrid
-              rows={managementData}
-              columns={columns}
-              />
-          </Box>
-        </Box>
-      </div>
-    </Layout>
-  );
-};
-
-export default Companies;
+      return (
+        <Layout showStat={true} >
+        <div className=" m-2 p-2 ml-16 md:ml-0 md:m-8 md:p-4 border-2 border-white shadow-lg rounded-sm bg-white w-full md:w-[53%] h-[80%]">
+          <Box m="16px">
+            <h1 className="font-bold">Helicopter Management Officer</h1>
+            <Box
+              m="10px 0 0 0"
+              height="73vh"
+              width="100%"
+              sx={{
+                "& .MuiDataGrid-root": {
+                  border: "none",
+                },
+                "& .MuiDataGrid-cell": {
+                  borderTop: "none",
+                },
+                "& .MuiDataGrid-columnHeaders": {
+    
+                  borderTop: "none",
+                },
+                "& .MuiDataGrid-footerContainer": {
+                  borderTop: "none",
+                  display:"none",
+                },
+                
+              }}
+              >
+                 <DataGrid
+                  rows={managementData}
+                  columns={columns}
+                  />
+              </Box>
+            </Box>
+          </div>
+        </Layout>
+      );
+    };
+    
+    export default HMO;
+    

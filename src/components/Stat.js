@@ -40,7 +40,7 @@ const Stat = () =>{
   
   
   return(
-    <section className="ml-60" >
+    <section className="hidden md:flex md:ml-60" >
       <div className=" md:w-[344px] h-[800px] bg-[#F8F7F1] shadow-sm px-6 py-4">
         <div className="mx-auto ">
           <h1 className="text-[16px] font-[500] leading-7 text-[#525256]">Todays Statistics</h1>
