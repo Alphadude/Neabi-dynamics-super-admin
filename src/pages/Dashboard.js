@@ -4,10 +4,9 @@ import { Box, Button, Typography } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { dashboardData } from "../Utils/formData.js";
 
-import Graph from '../images/dash/Graph.svg'
 import Layout from "../components/Layout.js";
 import Filter from "../images/dash/Filter.svg";
-
+import Graph from "../components/Graph.js";
 
 const Dashboard = () =>{
   const columns = [
@@ -59,7 +58,7 @@ const Dashboard = () =>{
 
   return(
     <Layout showStat={true}>
-      <section className="ml-8 md:ml-0 m-2 p-2 flex flex-col gap-60 w-[53%] h-screen">
+      <section className="ml-8 md:ml-0 m-2 p-2 flex flex-col gap-60 w-[53%] h-[600px]">
         <div>
           <div className="p-4 border-2 border-white shadow-lg rounded-sm p-6 bg-white w-[87vw] md:w-full h-[120px]">
             <h1 className="pb-4">Invoice Avalibility</h1>
@@ -85,10 +84,10 @@ const Dashboard = () =>{
             </div>
           </div>
 
-          <div className="mt-2 p-2 md:p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white w-[87vw] md:w-full h-[36%]">
+          <div className="mt-2 p-4 md:p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[87vw] md:w-full h-[300px]">
           <Box 
            sx={{
-            height: 570,
+            height: 200,
             width: '97%',
             "& .MuiDataGrid-root": {
               border: "none",
@@ -122,9 +121,8 @@ const Dashboard = () =>{
                 
             </Box>
           </div>
-
-          <div className="mx-0 w-[75vw]  h-[25vh] md:w-[100%] md: h-40">
-            <img src={Graph} alt="" />
+          <div className="mt-2 p-4 md:p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[87vw] md:w-full h-[320px] ">
+           <Graph />
           </div>
         </div>
       </section>
