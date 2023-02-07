@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { dashboardData } from "../Utils/formData.js";
 
@@ -8,43 +8,46 @@ import Graph from '../images/dash/Graph.svg'
 import Layout from "../components/Layout.js";
 import Filter from "../images/dash/Filter.svg";
 
+
 const Dashboard = () =>{
   const columns = [
-    {field: "number", headerName: "No", },
+    {field: "number", headerName: "No", width:5 },
     {
       field: "code",
       headerName: "Code",
       type: "number",
+      width:60,
       headerAlign: "left",
       align: "left",
       
     },
     {
      field: "name",
+     width:192,
      headerName: "Full Name",
-     cellClassName: "name-column--cell",
    },
    {
      field: "email",
      headerName: "Email",
-     type: "number",
+     width:220,
      headerAlign: "left",
      align: "left",
    },
    {
      field: "details",
      headerName: <img src={Filter} alt="" />,
-     
+     width:100,
      renderCell: ({ row: { details } }) => {
           return (
             <Button
               variant="contained"
               href="#contained-buttons"
               style={{
+
                   borderRadius: "4px",
                   backgroundColor: "#006AFF",
                   padding: "12px 25px",
-                  fontSize: { xs: '7px', sm: '8px' },
+                  fontSize: "9px",
               }}
               >
               Details
@@ -56,7 +59,7 @@ const Dashboard = () =>{
 
   return(
     <Layout showStat={true}>
-      <section className="ml-8 md:ml-0 m-2 p-2 flex flex-col gap-60 w-[53%]">
+      <section className="ml-8 md:ml-0 m-2 p-2 flex flex-col gap-60 w-[53%] h-screen">
         <div>
           <div className="p-4 border-2 border-white shadow-lg rounded-sm p-6 bg-white w-[87vw] md:w-full h-[120px]">
             <h1 className="pb-4">Invoice Avalibility</h1>
@@ -82,41 +85,42 @@ const Dashboard = () =>{
             </div>
           </div>
 
-          <div className="mt-2 p-2 md:p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white w-[87vw] md:w-full h-[47%]">
+          <div className="mt-2 p-2 md:p-4 border-2 border-white shadow-lg rounded-sm  p-6 bg-white w-[87vw] md:w-full h-[36%]">
           <Box 
-              m="14px"
-              sx={{ width: '100%' }}
-              >
-            <h1 className="font-bold">HMO on duty</h1>
-            <Box
-              m="5px 0 0 0"
-              height="34vh"
-              sx={{
-                width: "100%",
+           sx={{
+            height: 570,
+            width: '97%',
+            "& .MuiDataGrid-root": {
+              border: "none",
+            },
+            "& .MuiDataGrid-cell": {
+              borderTop: "none",
+            },
+            "& .MuiDataGrid-columnHeaders": {
 
-                "& .MuiDataGrid-root": {
-                  border: "none",
-                },
-                "& .MuiDataGrid-cell": {
-                  borderTop: "none",
-                },
-                "& .MuiDataGrid-columnHeaders": {
+              borderTop: "none",
+            },
+            "& .MuiDataGrid-footerContainer": {
+              borderTop: "none",
+              display:"none",
+            },
 
-                  borderTop: "none",
-                },
-                "& .MuiDataGrid-footerContainer": {
-                  borderTop: "none",
-                  display:"none",
-                },
-              }}
-              >
-               <DataGrid
-                rows={dashboardData}
-                columns={columns}
-                sx={{ overflowX: 'scroll' }}
-                />
+          }}>
+            
+          <Typography
+            variant="h6"
+            component="h6"
+            sx={{ textAlign: 'left', mt: 2, mb: 2 }}
+          >
+            HMO on duty
+          </Typography>
+        
+           <DataGrid
+              rows={dashboardData}
+              columns={columns}
+            />
+                
             </Box>
-          </Box>
           </div>
 
           <div className="mx-0 w-[75vw]  h-[25vh] md:w-[100%] md: h-40">

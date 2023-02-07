@@ -1,49 +1,49 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { airlineData } from "../Utils/formData.js";
 
 import Layout from "../components/Layout.js";
 import Filter from "../images/dash/Filter.svg";
 
-const Airlines = () => {
+const HMO = () => {
   const columns = [
-    {field: "number", headerName: "No", flex: 0.2, },
+    {field: "number", headerName: "No", width:5 },
     {
       field: "code",
       headerName: "Code",
       type: "number",
+      width:60,
       headerAlign: "left",
       align: "left",
-      flex: 0.7,
+      
     },
     {
      field: "name",
-     headerName: "Name",
-     flex: 1.5,
-     cellClassName: "name-column--cell",
+     width:192,
+     headerName: "Full Name",
    },
    {
      field: "category",
-     headerName: "Time Onboarding",
-     type: "number",
-     flex: 1.8,
+     headerName: "Category",
+     width:220,
      headerAlign: "left",
      align: "left",
    },
    {
      field: "details",
      headerName: <img src={Filter} alt="" />,
-     flex: 0.6,
+     width:100,
      renderCell: ({ row: { details } }) => {
           return (
             <Button
               variant="contained"
               href="#contained-buttons"
-              sx={{
-                  padding: "12px 25px",
-                  fontSize: { xs: '8px', sm: '9px' },
+              style={{
+
                   borderRadius: "4px",
                   backgroundColor: "#006AFF",
+                  padding: "12px 25px",
+                  fontSize: "9px",
               }}
               >
               Details
@@ -53,17 +53,15 @@ const Airlines = () => {
       },
     ];
 
+   
 
-  return (
-    <Layout showStat={true} >
-    <div className=" m-2 p-2 ml-16 md:ml-0 md:m-8 md:p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[95%] md:w-[53%] h-[80%]">
-      <Box m="16px">
-        <h1 className="font-bold">AIRLINES</h1>
-        <Box
-          m="10px 0 0 0"
-          height="73vh"
-          width="100%"
-          sx={{
+      return (
+        <Layout showStat={true} >
+        <div className=" mt-10  m-2 p-2 ml-16 md:ml-0 md:m-8 md:p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[80%] md:w-[53%] h-[90%]">
+          <Box 
+           sx={{
+            height: 570,
+            width: '97%',
             "& .MuiDataGrid-root": {
               border: "none",
             },
@@ -78,18 +76,27 @@ const Airlines = () => {
               borderTop: "none",
               display:"none",
             },
+
+          }}>
             
-          }}
+          <Typography
+            variant="h6"
+            component="h6"
+            sx={{ textAlign: 'left', mt: 2, mb: 2 }}
           >
-             <DataGrid
+            Airlines
+          </Typography>
+        
+           <DataGrid
               rows={airlineData}
               columns={columns}
-              />
-          </Box>
-        </Box>
-      </div>
-    </Layout>
-  );
-};
-
-export default Airlines;
+            />
+                
+            </Box>
+          </div>
+        </Layout>
+      );
+    };
+    
+    export default HMO;
+    
