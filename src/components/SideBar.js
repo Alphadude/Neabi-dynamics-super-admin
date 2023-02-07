@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 import { Nav, Extra } from '../Utils/data.js'
 import Logo from '../images/Nav/logo.svg'
-import Logout from '../images/sideBar/Logout.svg'
+import Log from '../images/sideBar/Logout.png'
 
 
 const SideBar = () =>{
@@ -17,7 +17,7 @@ const SideBar = () =>{
   }
   return(
     <section className="sideBar">
-      <div className="fixed absolute w-10 h-[800px] md:w-60 bg-[#0B1C2E] shadow-sm">
+      <div className="fixed absolute w-10 h-screen md:h-[800px] md:w-60 bg-[#0B1C2E] shadow-sm">
         {/*Logo*/}
         <div className="flex m-2 w-6 pb-4 pt-4 md:px-10 md:w-full ">
             <img src={Logo} alt="Naebi's Logo" />
@@ -71,8 +71,8 @@ const SideBar = () =>{
 
       <div className="m-2 mt-10 mb-16" onClick={()=>Logout()}>
         {/* <Link to="/log-out"> */}
-          <button className="flex md:w-44 md:px-10 py-3 md:mx-5 text-center mx-auto md:bg-gray-500 hover:border-gray-500 hover:bg-[#0B1C2E] md:border-2 md:border-gray-500">
-            <img src={Logout} alt="logout" />
+          <button className="flex mx-auto md:w-40 md:px-8 py-2 md:mx-5 text-center  md:bg-gray-500 hover:border-gray-500 hover:bg-[#0B1C2E] md:border-2 md:border-gray-500">
+            <img src={Log} alt="logout" className='pt-1'/>
             <p className="hidden md:flex ml-2 text-white">Logout</p>
           </button>
         {/* </Link> */}
