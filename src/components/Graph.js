@@ -61,7 +61,7 @@ const Graph = () => {
     <div className="app">
       <div className="row">
         <div className="mixed-chart">
-          <Chart options={options} series={series} type="area" height="300" />
+          <Chart options={options} series={series} type="area" height="270" />
         </div>
       </div>
     </div>

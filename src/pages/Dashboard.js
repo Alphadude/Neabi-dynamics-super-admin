@@ -121,7 +121,7 @@ const Dashboard = () =>{
                 
             </Box>
           </div>
-          <div className="mt-2 p-4 md:p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[87vw] md:w-full h-[320px] ">
+          <div className="mt-2 p-4 md:p-4 border-2 border-white shadow-lg rounded-sm bg-white w-[87vw] md:w-full h-[290px] ">
            <Graph />
           </div>
         </div>
